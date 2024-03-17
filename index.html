@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Vite App</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+</head>
+
+<body>
+  <div class="display-cover">
+    <video id="videoElement" autoplay>
+    </video>
+    <canvas id="canvas2d"></canvas>
+    <div class="buttonGroup">
+      <button class="btnx" id="toggleStream">Toggle Stream</button>
+      <button class="btnx" id="startRecording" disabled>Start Recording</button>
+      <button class="btnx" id="stopRecording" disabled>Stop Recording</button>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
