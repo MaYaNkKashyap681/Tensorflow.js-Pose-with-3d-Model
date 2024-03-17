@@ -1,10 +1,11 @@
+import { ctr } from "./centroid";
 
 // DOM elements
 const videoObj = document.getElementById("videoElement");
 const toggleStreamButton = document.getElementById("toggleStream");
 const startRecordingButton = document.getElementById("startRecording");
 const stopRecordingButton = document.getElementById("stopRecording");
-const canvas2d = document.getElementsByTagName("canvas")[0];
+const canvas2d = document.getElementById("canvas2d");
 
 // Variables
 let stream = null;
@@ -134,7 +135,7 @@ function drawPoses(poses) {
     }
     centroidX /= poses.keypoints.length;
     centroidY /= poses.keypoints.length;
-
+    ctr.setter(centroidX, centroidY);
     // Draw centroid
     ctx.fillStyle = "blue"; // Set fill color for centroid
     ctx.beginPath();
